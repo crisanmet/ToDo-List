@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --primary: lightgreen;
+  --secondary: red;
+  --light: #fff;
+  --dark: black;
+  --disabled: #e7e7e7;
+}
+
+body {
+  font-family: "Roboto";
+  margin: 0;
+  height: 100vh;
+  background-color: var(--disabled);
+}
+
+*::first-letter {
+  text-transform: capitalize;
+}
+
+.container {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--light);
+  width: 100%;
+  max-width: 350px;
+}
+
+.container__titulo {
+  text-align: center;
+  color: green;
+}
+.container__fecha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+form {
+  margin: 20px 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 1rem;
+}
+
+input {
+  bottom: none;
+  outline: none;
+  padding-left: 10px;
+  background-color: var(--disabled);
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.agregar,
+.ordenar {
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.agregar {
+  height: 35px;
+  border-radius: 50%;
+  font-size: 18px;
+  background-color: var(--disabled);
+}
+
+.ordenar {
+  background-color: var(--secondary);
+  color: var(--light);
+  border-radius: 5px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+  padding: 15px;
+  margin-top: 15px;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.list button {
+  opacity: 0;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: var(--secondary);
+}
+
+.list:hover {
+  opacity: 1;
+}
+
+.done {
+  background-color: var(--disabled);
+  text-decoration: line-through;
+  color: var(--dark);
+}
